@@ -19,5 +19,6 @@ Description: A modern, responsive portfolio showcasing my skills, projects, and 
 Clone and open live server index.html in your browser.
 
 ## Author
-MD. Tanzir Hossain | [GitHub](https://github.com/tanzirrabby) | [Linkedin](www.linkedin.com/in/tanzirrabby)
+MD. Tanzir Hossain | [GitHub](https://github.com/tanzirrabby) | [LinkedIn](https://www.linkedin.com/in/tanzirrabby)
+
   All Rights Reserved
