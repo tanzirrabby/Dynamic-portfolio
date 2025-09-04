@@ -1,19 +1,17 @@
-
+/*reset and styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: "Poppins", sans-serif;
-  color: white;
+  color: #fff;
   background: #0f2027;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-
-
+/*bg animatiomn*/
 .animated-bg {
   position: fixed;
   width: 100%;
@@ -21,7 +19,6 @@ body {
   z-index: -1;
   overflow: hidden;
 }
-
 .animated-bg span {
   position: absolute;
   width: 80px;
@@ -30,36 +27,32 @@ body {
   border-radius: 50%;
   animation: move 15s linear infinite;
 }
-
+/* animation position and delay */
 .animated-bg span:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
 .animated-bg span:nth-child(2) { top: 40%; left: 70%; animation-delay: 2s; }
 .animated-bg span:nth-child(3) { top: 80%; left: 10%; animation-delay: 4s; }
 .animated-bg span:nth-child(4) { top: 60%; left: 50%; animation-delay: 6s; }
 .animated-bg span:nth-child(5) { top: 20%; left: 90%; animation-delay: 8s; }
-
 @keyframes move {
-  0% { transform: translateY(0) rotate(0); }
-  50% { transform: translateY(-200px) rotate(180deg); }
+  0%   { transform: translateY(0) rotate(0deg); }
+  50%  { transform: translateY(-200px) rotate(180deg); }
   100% { transform: translateY(0) rotate(360deg); }
 }
-
-
+/*header and nav*/
 header {
   position: fixed;
-  width: 100%;
   top: 0;
-  background: rgba(0,0,0,0.6);
-  padding: 1rem 2rem;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
   z-index: 10;
 }
-
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -68,24 +61,20 @@ nav {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .nav-links {
-  list-style: none;
   display: flex;
+  list-style: none;
   gap: 1.5rem;
 }
-
 .nav-links a {
+  color: #fff;
   text-decoration: none;
-  color: white;
-  transition: 0.3s;
+  transition: color 0.3s ease;
 }
-
 .nav-links a:hover {
   color: #ff8a00;
 }
-
-
+/* hero section */
 .hero {
   height: 100vh;
   display: flex;
@@ -95,184 +84,155 @@ nav {
   text-align: center;
   padding: 2rem;
 }
-
 .profile-pic {
-  border: 5px solid transparent;
-  border-radius: 100%;
+  margin-bottom: 1rem;
   padding: 5px;
+  border: 5px solid transparent;
+  border-radius: 50%;
   background: linear-gradient(45deg, #ff8a00, #e52e71, #00c9ff, #92fe9d);
   background-size: 300% 300%;
   animation: glowing 8s infinite alternate;
-  margin-bottom: 1rem;
 }
-
 .profile-pic img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
-  display: block;
-  margin: 0 auto;
   background: #222;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
 }
-
-@media (max-width: 600px) {
-  .profile-pic img {
-    width: 120px;
-    height: 120px;
-  }
-}
-
-
-@keyframes glowing {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 .hero h2 {
   font-size: 2.5rem;
 }
-
 .hero h2 span {
   color: #ff8a00;
 }
-
 .typing {
   width: 20ch;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid #ff8a00;
-  animation: typing 4s steps(20) infinite alternate;
   margin: 0.5rem 0;
+  animation: typing 4s steps(20) infinite alternate;
 }
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 50ch; }
-}
-
 .hero p {
   max-width: 600px;
   margin: 1rem auto;
 }
-
 .btn {
   display: inline-block;
-  padding: 0.7rem 1.5rem;
   margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
   border-radius: 30px;
   background: linear-gradient(45deg, #ff8a00, #e52e71);
-  color: white;
+  color: #fff;
   text-decoration: none;
   transition: transform 0.3s ease;
 }
-
 .btn:hover {
   transform: scale(1.1);
 }
-
-
-.about, .skills, .projects, .experience, .contact {
+/*sections*/
+.about,
+.skills,
+.projects,
+.experience,
+.contact {
   padding: 5rem 2rem;
   text-align: center;
 }
-
-
+/* skills  */
 .skill-bar {
   margin: 1rem 0;
 }
-
 .skill-bar p {
   margin-bottom: 0.2rem;
 }
-
 .bar {
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 30px;
   overflow: hidden;
 }
-
 .bar span {
   display: block;
   height: 15px;
-  background: linear-gradient(45deg, #ff8a00, #e52e71);
   border-radius: 30px;
+  background: linear-gradient(45deg, #ff8a00, #e52e71);
   animation: grow 2s ease-out forwards;
 }
-
-@keyframes grow {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-
+/* projects */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
-
 .project-card {
-  padding: 2rem 1rem 1.5rem 1rem;
-  background: rgba(255,255,255,0.1);
-  border-radius: 15px;
-  transition: 0.3s;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 260px;
+  padding: 2rem 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  transition: 0.3s ease;
 }
-
+.project-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
 .project-title {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  text-align: center;
 }
-
 .project-img {
   width: 100%;
   max-width: 320px;
   height: 180px;
   object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-  margin-bottom: 0.5rem;
   background: #222;
-  display: block;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
 }
-
-@media (max-width: 600px) {
-  .project-img {
-    max-width: 100%;
-    height: 120px;
-  }
-}
-
-
-.project-card:hover {
-  transform: translateY(-10px) scale(1.05);
-  background: rgba(255,255,255,0.2);
-}
-
-
+/* experience */
 .experience ul {
   list-style: none;
   margin-top: 1rem;
 }
-
 .experience li {
   margin: 1rem 0;
   font-size: 1.1rem;
 }
-
-
+/* footer */
 footer {
   text-align: center;
-  padding: 1.5rem;
-  background: rgba(0,0,0,0.7);
   margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.7);
+}
+/* animations */
+@keyframes glowing {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 50ch; }
+}
+@keyframes grow {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+/*responsive*/
+@media (max-width: 600px) {
+  .profile-pic img {
+    width: 120px;
+    height: 120px;
+  }
+  .project-img {
+    height: 120px;
+  }
 }
