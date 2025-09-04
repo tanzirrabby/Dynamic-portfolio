@@ -1,6 +1,6 @@
 # My Portfolio Website
 
-*Description:* A modern, responsive portfolio showcasing my skills, projects, and experience.
+Description: A modern, responsive portfolio showcasing my skills, projects, and experience.
 
 ## Preview
 <img width="1856" height="854" alt="image" src="https://github.com/user-attachments/assets/ce484c2d-a3db-44bf-95ca-feb98814f7ff" />
