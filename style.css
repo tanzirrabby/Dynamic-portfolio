@@ -1,3 +1,52 @@
+/* Contact Form Styling */
+.contact-form {
+  max-width: 400px;
+  margin: 2rem auto;
+  background: rgba(255,255,255,0.07);
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.contact-form label {
+  font-weight: 500;
+  color: #ff8a00;
+  margin-bottom: 0.2rem;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.15);
+  color: #222;
+  font-size: 1rem;
+  resize: vertical;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #ff8a00;
+}
+.contact-form button {
+  background: linear-gradient(45deg, #ff8a00, #e52e71);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.contact-form button:hover {
+  background: linear-gradient(45deg, #e52e71, #ff8a00);
+}
 html{
   scroll-behavior: smooth;
 }
